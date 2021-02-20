@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leads list</title>
+    <style>
+        .lead {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 6px;
+            padding-right: 6px;
+            margin-top: 10px;
+            background-color: #f6f6f6;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h2>Here's a list of leads:</h2>
+    
+    {% for lead in leads %}
+        <div class="lead">
+            <a href="{{ lead.pk }}/">{{ lead.first_name }} {{ lead.last_name }}</a>. Age: {{ lead.age }}
+        </div>
+    {% endfor %}
+    
+</body>
+</html>
