@@ -1,1 +1,1 @@
-web: gunicorn djangoCRM.wsgi --log-file -
+web: gunicorn djangoCRM.wsgi
